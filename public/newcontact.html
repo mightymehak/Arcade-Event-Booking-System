@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class = "contact-us">
+    <!-- Header and Navigation Bar -->
+    <section class="review">
+        <nav>
+            <div class="nav-links" id="navlinks">
+                <ul>
+                    <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <li><a href="newindex.html">HOME</a></li>
+                    <li><a href="newabout.html">ABOUT</a></li>
+                    <li><a href="tickets.html">TICKETS</a></li>
+                    <li><a href="newcontact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <section class="map-section">
+        <h1>Find Us Here!</h1>
+        <p>We are located at this awesome spot!</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d109126.46556991848!2d75.56171974947137!3d31.270505910860553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1slocation%20of%20smash%20jalandhar!5e0!3m2!1sen!2sin!4v1738688746217!5m2!1sen!2sin" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Replace with actual map image -->
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>Have a question? We would love to hear from you!</p>
+
+            <form id="contact-form" action="" method="post" class="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="javascript.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  
+     
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+        
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Message:", message);
+        
+            document.getElementById("contact-form").reset();
+            
+            // Alert user
+            alert("Your message has been sent!");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Successful</title>
+</head>
+<body class = "Successful">
+    <section class="success">
+        <div class = "payment">
+            <h1>Payment Successful!✅</h1>
+            <p>Thank you for booking your tickets!</p>
+            <p id = "order-id"></p>
+            <img src="/qrcode.png" alt="success">
+            <p id = "scan">Scan the QR code to enter the event</p>
+        </div>
+        <div class="back-container">
+            <a href = "newindex.html" id = "back">Back to Home</a>
+        </div>
+    </section>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+        document.getElementById('order-id').textContent = `Order ID: ${orderId}`;
+    </script>
+</body>
+</html>

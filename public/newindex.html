@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <div class = "nav-links" id = "navlinks">
+                <ul>
+                    <i class="fa fa-times-circle" onclick = "hideMenu()"></i>
+                    <li><a href = "newindex.html">HOME</a></li>
+                    <li><a href = "newabout.html">ABOUT</a></li>
+                    <li><a href = "tickets.html">TICKETS</a></li>
+                    <li><a href = "">CONTACT</a></li>
+                    <span class = "user" onclick="toggleMenu()"><ion-icon name="person-circle-outline"></ion-icon>
+                        <div class="sub-menu-wrap" id="drop" >
+                            <div class="sub-menu" id = "attributes">
+                                <a class = "logout"href = "index.html">Logout
+                                    <ion-icon class = "ion" name="log-out-outline"></ion-icon>
+                                </a>
+                                <hr>
+                                <a class = "profile"href = "profile.html">Profile
+                                    <ion-icon class = "ion"name="person-circle-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </span>
+                </ul>
+                
+            <i class="fa fa-bars" onclick = "showMenu()"></i>
+        </nav>
+        <div class = "div-text">
+            <h1>ONE-OF-A KIND EXPERIENCE!</h1>
+            <p>So What are you waiting for! Join us for a fun-filled day of games and activities🎳</p>
+            <button class = "btn">VISIT US TO KNOW MORE!</button>
+        </div>
+    </section>
+
+    <!-- Arcade deets -->
+     <section class = "arcade">
+        <h1>
+            SHAZAM!⚡️
+        </h1>
+        <p>
+            <i>Welcome to the world of arcade games!🎮</i></p>
+        <div class="row">
+            <div class="col">
+                <h3>BOWLING</h3>
+                <p>Pins are falling, fun is rising—bowling made for everyone!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies.</p>
+            </div>
+            <div class="col">
+                <h3>GAMING ZONE</h3>
+                <p>Pins are falling, fun is rising—bowling made for everyone!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies.</p>
+            </div>
+            <div class="col">
+                <h3>POOL TABLE</h3>
+                <p>Pins are falling, fun is rising—bowling made for everyone!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies.</p>
+            </div>
+        </div>
+        <div class = "container">
+            <div class="wrapper">
+                <div class="wrapper-holder">
+                    <div id="slider1"></div>
+                    <div id="slider2"></div>
+                    <div id="slider3"></div>
+                    <div id="slider4"></div>
+                    <div id="slider5"></div>
+                    <div id="slider6"></div>
+                    <div id="slider7"></div>
+                    <div id="slider8"></div>
+                </div>
+            </div>
+        </div>
+        <section class = "cta">
+            <h1>ORGANIZE BIRTHDAY PARTIES FOR YOUR CHILDREN!🎈<BR>NOW OPEN!</h1>
+            <button class = "btn">CONTACT US</button> 
+        </section>
+        <section class="footer">
+            <h4>Follow us on social media</h4>
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </section>
+     </section>
+
+    <script src = "javascript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+
+        if(message){
+           alert(message);
+        }
+        else{
+            console.log('No message');
+        }
+    </script>
+    <script>
+        let subMenu = document.getElementById('drop');
+
+        function toggleMenu(){
+            subMenu.classList.toggle('open-menu');
+        }
+    </script>
+</body>
+</html>

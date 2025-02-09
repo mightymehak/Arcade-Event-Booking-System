@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class = "signup">
+    <div class="signup-box">
+        <form action = "/auth/signup" method = "POST" id = "signupform">
+            <h2>Sign up</h2>
+            <div id="error-message"></div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon>
+                </span>
+                <input type = "username" required name = "name">
+                <label for = "email">Username</label>
+            </div>
+            <div class="input-box">
+                <span class = "icon"><ion-icon name="mail"></ion-icon>
+                </span>
+                <input type = "email" required name = "email">
+                <label for = "email">Email</label>
+            </div>
+            <div class="input-box">
+                <span class = "icon"><ion-icon name="call-sharp"></ion-icon>
+                </span>
+                <input type = "tel" required name = "phone">
+                <label for = "number">Phone Number</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type = "password" required name = "password">
+                <label for = "password">Password</label>
+            </div>
+            <button type = "submit">Submit</button>
+        </form>
+    </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        
+        if (message) {
+            document.getElementById('error-message').textContent = message;
+        }
+    </script>
+    </script>
+</body>
+</html>

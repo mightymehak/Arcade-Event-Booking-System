@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class = "upcoming">
+    <div class = "sub-header2">
+        <nav>
+            <div class = "nav-links" id = "navlinks">
+                <ul>
+                    <i class="fa fa-times-circle" onclick = "hideMenu()"></i>
+                    <li><a href = "index.html">HOME</a></li>
+                    <li><a href = "about.html">ABOUT</a></li>
+                    <li><a href = "login.html">LOGIN/SIGNUP</a></li>
+                    <li><a href = "events.html">EVENTS</a></li>
+                    <li><a href = "contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick = "showMenu()"></i>
+        </nav>
+        <div class = "events">
+            <div>
+            <h1>OUR UPCOMING EVENTS!</h1>
+            <p id = "hurry">HURRY UP! Limited slots available</p>
+            <p>Register now to book your tickets🎟️</p>
+            <button class = "Register">REGISTER</button>
+        </div>
+        <div class="event-images">
+            <img src="retronight.png" alt="events" class="event-img" id="event1">
+            <img src="karaokenight.png" alt="events" class="event-img" id="event2">
+            <img src="familyday.png" alt="events" class="event-img" id="event3">
+            <img src="esportsimage.png" alt="events" class="event-img" id="event4">
+        </div>
+        </div>
+    </div>
+    
+    <div class="smallimages">
+        <div><img src="retronight.png" alt="events" onclick="toggleEvent('event1')"></div>
+        <div><img src="karaokenight.png" alt="events" onclick="toggleEvent('event2')"></div>
+        <div><img src="familyday.png" alt="events" onclick="toggleEvent('event3')"></div>
+        <div><img src="esportsimage.png" alt="events" onclick="toggleEvent('event4')"></div>
+    </div>
+
+    <script src = "javascript.js">
+    </script>
+</body>
+</html>
